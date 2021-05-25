@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ResultbarComponent } from './resultbar/resultbar.component';
-import { MaterialModule } from './material/material.module';
+ import { MaterialModule } from './material/material.module';
 @NgModule({
   declarations: [
     AppComponent,
