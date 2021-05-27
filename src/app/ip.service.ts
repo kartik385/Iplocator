@@ -10,7 +10,7 @@ export class IpService implements OnDestroy{
  
     subscription1:Subscription=new Subscription;
 
-    apikey:string="at_L4CFS0h2doAM8hlvE79LI79Aw1Yyb";
+    apikey:string;
 
     gotIp=new Subject<string>();
     failed=new Subject<boolean>();
