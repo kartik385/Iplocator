@@ -1,1 +1,21 @@
-<p>searchbar works!</p>
+<div
+  class="wrap d-flex flex-column justify-content-center align-items-center m-3"
+>
+  <h1>IP Address Tracker</h1>
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div class="row">
+      <div class="col-md-10">
+        <input
+          type="text"
+          class="form-control p-3 px-5"
+          placeholder="Enter the IP"
+          name="ip"
+          ngModel
+        />
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-success p-3">Search</button>
+      </div>
+    </div>
+  </form>
+</div>

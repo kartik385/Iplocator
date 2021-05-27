@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { ResultbarComponent } from './resultbar/resultbar.component';
  import { MaterialModule } from './material/material.module';
+ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +15,7 @@ import { ResultbarComponent } from './resultbar/resultbar.component';
     ResultbarComponent
   ],
   imports: [
- 
+ LeafletModule,
   BrowserModule,
     BrowserAnimationsModule,
     FormsModule,

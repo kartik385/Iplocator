@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { IpService } from './../ip.service';
 
 @Component({
   selector: 'app-searchbar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ipService:IpService) { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form:NgForm){
+    this.ipService.getResult(form.value.ip);
   }
 
 }

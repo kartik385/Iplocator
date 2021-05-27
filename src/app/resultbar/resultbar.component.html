@@ -1,1 +1,36 @@
-<p>resultbar works!</p>
+<div class="mx-5" *ngIf="!gotError && !loading">
+  <mat-card>
+    <div class="row d-flex flex-row flex-wrap justify-content-between">
+      <div class="col-auto p-3">
+        <p>IP ADDRESS</p>
+        <h2>{{ ip.ip }}</h2>
+      </div>
+      <div class="col-auto p-3">
+        <p>LOCATION</p>
+        <h2 class="text-nowrap">{{ ip.location }}</h2>
+      </div>
+      <div class="col-auto p-3">
+        <p>TIMEZONE</p>
+        <h2>{{ ip.timezone }}</h2>
+      </div>
+      <div class="col-auto p-3">
+        <p>ISP</p>
+        <h2>{{ ip.isp }}</h2>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<div id="map" class="mx-auto mt-3" [ngClass]="{ error: gotError }"></div>
+<div class="loader" *ngIf="loading">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div *ngIf="gotError">
+  <div class="p-3 mb-2 bg-danger text-white text-center">
+    <h1>Error!!</h1>
+    <p>Check your connectivity or Entered Ip Address</p>
+  </div>
+</div>
